@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4cb4e6c64b5355404bade1d0a204cbec",
-    "content-hash": "176157ea5f31f46e66141138802e4eea",
+    "hash": "e749d9bbffdc23d171522817b5456b2e",
+    "content-hash": "479326a9286b997440e8307aa6b520cb",
     "packages": [],
     "packages-dev": [
         {
@@ -64,16 +64,16 @@
         },
         {
             "name": "facebook/webdriver",
-            "version": "1.1.2",
+            "version": "1.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facebook/php-webdriver.git",
-                "reference": "0b889d7de7461439f8a3bbcca46e0f696cb27986"
+                "reference": "b7186fb1bcfda956d237f59face250d06ef47253"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facebook/php-webdriver/zipball/0b889d7de7461439f8a3bbcca46e0f696cb27986",
-                "reference": "0b889d7de7461439f8a3bbcca46e0f696cb27986",
+                "url": "https://api.github.com/repos/facebook/php-webdriver/zipball/b7186fb1bcfda956d237f59face250d06ef47253",
+                "reference": "b7186fb1bcfda956d237f59face250d06ef47253",
                 "shasum": ""
             },
             "require": {
@@ -81,7 +81,9 @@
                 "php": ">=5.3.19"
             },
             "require-dev": {
-                "phpunit/phpunit": "4.6.*"
+                "friendsofphp/php-cs-fixer": "^1.11",
+                "phpunit/phpunit": "4.6.* || ~5.0",
+                "squizlabs/php_codesniffer": "^2.6"
             },
             "suggest": {
                 "phpdocumentor/phpdocumentor": "2.*"
@@ -104,7 +106,7 @@
                 "selenium",
                 "webdriver"
             ],
-            "time": "2016-06-04 00:02:34"
+            "time": "2016-08-10 00:44:08"
         },
         {
             "name": "myclabs/deep-copy",
@@ -1300,6 +1302,43 @@
             "time": "2016-07-17 14:02:08"
         },
         {
+            "name": "verkkokauppacom/parallel-phpunit",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/verkkokauppacom/parallel-phpunit.git",
+                "reference": "84f2cea5e616d6d783d44ff4ed09f1f09c77a321"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/verkkokauppacom/parallel-phpunit/zipball/84f2cea5e616d6d783d44ff4ed09f1f09c77a321",
+                "reference": "84f2cea5e616d6d783d44ff4ed09f1f09c77a321",
+                "shasum": ""
+            },
+            "require": {
+                "phpunit/phpunit": "*"
+            },
+            "bin": [
+                "bin/parallel-phpunit"
+            ],
+            "type": "library",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Samuli Siivonen",
+                    "email": "samuli.siivonen@reaktor.fi"
+                }
+            ],
+            "description": "Parallel version of phpunit command line",
+            "support": {
+                "source": "https://github.com/verkkokauppacom/parallel-phpunit/tree/master",
+                "issues": "https://github.com/verkkokauppacom/parallel-phpunit/issues"
+            },
+            "time": "2013-07-10 10:17:21"
+        },
+        {
             "name": "webmozart/assert",
             "version": "1.1.0",
             "source": {
@@ -1352,7 +1391,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "verkkokauppacom/parallel-phpunit": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
