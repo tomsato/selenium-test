@@ -24,7 +24,9 @@ class firefoxTest extends PHPUnit_Framework_TestCase
         // 「Google」というタイトルを取得できることを確認する
         $title = $driver->getTitle();
         $this->assertEquals("Google", $title);
-        // $driver->takeScreenshot('tmp.png');
+
+        // スクリーンショットを取得
+        $driver->takeScreenshot('tmp.png');
  
         //ブラウザを閉じる
         $driver->close();
