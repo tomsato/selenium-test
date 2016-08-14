@@ -10,6 +10,9 @@ class firefoxTest extends PHPUnit_Framework_TestCase
 {
     public function testWebUI()
     {
+        // タイムアウト時間を設定
+        set_time_limit(60);
+
         // ドライバーの起動
         $host = 'http://localhost:4444/wd/hub';
         $driver = RemoteWebDriver::create($host, DesiredCapabilities::firefox());
@@ -17,10 +20,6 @@ class firefoxTest extends PHPUnit_Framework_TestCase
         // テストページへ遷移
         $driver->get('https://www.google.co.jp/');
  
-        $driver->wait(20, 1000)->until(
-            WebDriverExpectedCondition::titleIs('Google')
-        );
-
         // 「Google」というタイトルを取得できることを確認する
         $title = $driver->getTitle();
         $this->assertEquals("Google", $title);
