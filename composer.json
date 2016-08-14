@@ -1,6 +1,14 @@
 {
   "require-dev": {
     "phpunit/phpunit": "^5.4",
-    "facebook/webdriver": "^1.1"
-  }
+    "facebook/webdriver": "^1.1",
+    "verkkokauppacom/parallel-phpunit": "dev-master"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url":  "git://github.com/verkkokauppacom/parallel-phpunit.git"
+    }
+
+  ]
 }

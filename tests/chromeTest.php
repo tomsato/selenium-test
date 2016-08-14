@@ -6,7 +6,7 @@ use Facebook\WebDriver\Remote;
 use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Facebook\WebDriver\Remote\DesiredCapabilities;
  
-class firefoxTest extends PHPUnit_Framework_TestCase 
+class chromeTest extends PHPUnit_Framework_TestCase 
 {
     public function testWebUI()
     {
@@ -14,7 +14,7 @@ class firefoxTest extends PHPUnit_Framework_TestCase
         $host = 'http://localhost:4444/wd/hub';
         $driver = RemoteWebDriver::create(
             $host,
-            DesiredCapabilities::firefox(),
+            DesiredCapabilities::chrome(),
             180 * 1000, // Connection timeout in miliseconds
             180 * 1000  // Request timeout in miliseconds
         );
@@ -27,7 +27,7 @@ class firefoxTest extends PHPUnit_Framework_TestCase
         $this->assertEquals("Google", $title);
 
         // スクリーンショットを取得
-        $driver->takeScreenshot('tmp2.png');
+        $driver->takeScreenshot('tmp1.png');
  
         //ブラウザを閉じる
         $driver->close();
