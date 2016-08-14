@@ -17,9 +17,14 @@ class firefoxTest extends PHPUnit_Framework_TestCase
         // テストページへ遷移
         $driver->get('https://www.google.co.jp/');
  
+        $driver->wait(20, 1000)->until(
+            WebDriverExpectedCondition::titleIs('Google')
+        );
+
         // 「Google」というタイトルを取得できることを確認する
         $title = $driver->getTitle();
         $this->assertEquals("Google", $title);
+        // $driver->takeScreenshot('tmp.png');
  
         //ブラウザを閉じる
         $driver->close();
