@@ -6,12 +6,13 @@ use Facebook\WebDriver\Remote;
 use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Facebook\WebDriver\Remote\DesiredCapabilities;
  
+// タイムアウト時間を設定
+set_time_limit(60);
+
 class firefoxTest extends PHPUnit_Framework_TestCase 
 {
     public function testWebUI()
     {
-        // タイムアウト時間を設定
-        set_time_limit(60);
 
         // ドライバーの起動
         $host = 'http://localhost:4444/wd/hub';
