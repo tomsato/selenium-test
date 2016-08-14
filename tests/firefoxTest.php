@@ -6,9 +6,6 @@ use Facebook\WebDriver\Remote;
 use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Facebook\WebDriver\Remote\DesiredCapabilities;
  
-// タイムアウト時間を設定
-set_time_limit(60);
-
 class firefoxTest extends PHPUnit_Framework_TestCase 
 {
     public function testWebUI()
@@ -19,8 +16,8 @@ class firefoxTest extends PHPUnit_Framework_TestCase
         $driver = RemoteWebDriver::create(
             $host,
             DesiredCapabilities::firefox(),
-            60 * 1000, // Connection timeout in miliseconds
-            60 * 1000  // Request timeout in miliseconds
+            180 * 1000, // Connection timeout in miliseconds
+            180 * 1000  // Request timeout in miliseconds
         );
  
         // テストページへ遷移
