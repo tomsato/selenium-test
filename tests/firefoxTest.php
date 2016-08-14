@@ -16,7 +16,12 @@ class firefoxTest extends PHPUnit_Framework_TestCase
 
         // ドライバーの起動
         $host = 'http://localhost:4444/wd/hub';
-        $driver = RemoteWebDriver::create($host, DesiredCapabilities::firefox());
+        $driver = RemoteWebDriver::create(
+            $host,
+            DesiredCapabilities::firefox(),
+            60 * 1000, // Connection timeout in miliseconds
+            60 * 1000  // Request timeout in miliseconds
+        );
  
         // テストページへ遷移
         $driver->get('https://www.google.co.jp/');
