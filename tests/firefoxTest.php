@@ -27,7 +27,7 @@ class firefoxTest extends PHPUnit_Framework_TestCase
         $this->assertEquals("Google", $title);
 
         // スクリーンショットを取得
-        $driver->takeScreenshot('tmp2.png');
+        $driver->takeScreenshot('cap01.png');
  
         //ブラウザを閉じる
         $driver->close();

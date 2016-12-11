@@ -1,7 +1,17 @@
 {
   "require-dev": {
     "phpunit/phpunit": "^5.4",
-    "facebook/webdriver": "^1.1",
-    "verkkokauppacom/parallel-phpunit": "dev-master"
+    "facebook/webdriver": "^1.1"
+  },
+  "scripts": {
+    "selenium-setup": [
+      "wget http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar",
+    ],
+	"selenium-redy": [
+      "java -jar selenium-server-standalone-2.53.1.jar -port 4444 -Dwebdriver.firefox.bin=/usr/bin/firefox",
+	],
+	"selenium-start": [
+      "./vendor/bin/phpunit tests/firefoxTest.php"
+	],
   }
 }
