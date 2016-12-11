@@ -7,11 +7,11 @@
     "selenium-setup": [
       "wget http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar",
     ],
-	"selenium-redy": [
+    "selenium-redy": [
       "java -jar selenium-server-standalone-2.53.1.jar -port 4444 -Dwebdriver.firefox.bin=/usr/bin/firefox",
-	],
-	"selenium-start": [
+    ],
+    "selenium-start": [
       "./vendor/bin/phpunit tests/firefoxTest.php"
-	],
+    ]
   }
 }
